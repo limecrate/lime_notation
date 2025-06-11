@@ -24,10 +24,12 @@ func (lp *LmnParser) value() (any, error) {
 	var val any
 	var err error = nil
 
-	if val, err = lp.getAnchorValue(); err == nil { // 캡쳐 성공
+	if val, err = lp.getAnchorValue(); err == nil { // 캡쳐 가지오기 성공
 		// Capture cannot be captured
 		return val, nil
 	}
+
+	err = nil
 
 	switch here := lp.here(); here {
 	case '(':
