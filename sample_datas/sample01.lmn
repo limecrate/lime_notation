@@ -4,7 +4,7 @@
 	age: 18 ~age,
 	school: 'GeochangHighschool' ~school,
 	id: '\(school)-3227',
-	hobbies: ['Chess', 'Programming'] ~genius,
+	hobbies: ['Chess', 'Programming',] ~genius,
 	position: 'president',
 ),
 (
