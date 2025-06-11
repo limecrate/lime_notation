@@ -1,0 +1,29 @@
+# Lime Notation
+(
+	name: "Alice",
+	age: 18 ~age,
+	school: 'GeochangHighschool' ~school,
+	id: '\(school)-3227',
+	hobbies: ['Chess', 'Programming'] ~genius,
+	position: 'president',
+),
+(
+	name: 'Bob',
+	age,
+	school,
+	id: '\(school)-3429',
+	hobbies: ['Sleeping', ..genius]
+) ~student,
+(
+	name: "Lee Euchan",
+	id: '\(school)-3121',
+	school: ?,
+	in-school: -,
+),
+(
+  ..student,
+	name: 'Cathy',
+  id: "\(school)-4132"
+	gender: ?,
+	'debt($)': 299_792_458, # OMG!
+)
