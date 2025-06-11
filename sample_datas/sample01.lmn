@@ -21,9 +21,9 @@
 	in-school: -,
 ),
 (
-  ..student,
+	..student,
 	name: 'Cathy',
-  id: "\(school)-4132"
+	id: "\(school)-4132"
 	gender: ?,
 	'debt($)': 299_792_458, # OMG!
 )
