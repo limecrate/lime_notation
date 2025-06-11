@@ -1,1 +1,1 @@
-# Sample LMN Parser with Go Programming Lang
+# Sample LMN Parser with Go Programming Language
