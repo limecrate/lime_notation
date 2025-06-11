@@ -3,8 +3,8 @@ package lmn
 import "unicode/utf8"
 
 func (lp *LmnParser) anchor() (string, error) {
-	// 시작 허용 문자: 알파벳, _,
-	// 시작 불가 허용 문자: 숫자, -, .
+	// 시작 허용 문자: 알파벳, _
+	// 시작 비허용 문자: 숫자, -, .
 	// 비어 있을 수 없음
 	var res = []byte{}
 

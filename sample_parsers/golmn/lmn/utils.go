@@ -2,7 +2,6 @@ package lmn
 
 import "slices"
 
-// var numbers = [...]byte{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
 var whites = [...]byte{'\r', '\n', '\t', ' '}
 
 func (lp LmnParser) here() byte {

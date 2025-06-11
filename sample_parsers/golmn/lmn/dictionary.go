@@ -31,7 +31,7 @@ func (lp *LmnParser) dictionary(skipFirst bool) (map[string]any, error) {
 			}
 		} else {
 			canSpread = false
-			key, err := lp.ident()
+			key, err := lp.key()
 
 			if err != nil {
 				return nil, err
