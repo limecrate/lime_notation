@@ -1,29 +1,32 @@
-# Lime Notation
+# Lime Notation Sample
+
+# 최상위 리스트 혹은 딕셔너리 괄호 생략 가능
 (
 	name: "Alice",
-	age: 18 ~age,
-	school: 'GeochangHighschool' ~school,
-	id: '\(school)-3227',
+	age: 18 ~age,  # 'age'라는 이름의 앵커 설정
+	school: 'GeochangHighschool' ~school, # 'school'이라는 이름의 앵커 설정
+	id: '\(school)-3227', # 앵커 school을 사용해 문자열 보간
 	hobbies: ['Chess', 'Programming',] ~genius,
 	position: 'president',
 ),
 (
 	name: 'Bob',
-	age,
+	age,  # 앵커와 키 이름이 같으면 딕셔너리 내에서 생략 가능
 	school,
 	id: '\(school)-3429',
-	hobbies: ['Sleeping', ..genius]
+	hobbies: ['Sleeping', ..genius]  # 앵커 genius를 사용한 리스트 전개 구문
 ) ~student,
 (
 	name: "Lee Euchan",
 	id: '\(school)-3121',
-	school: ?,
-	in-school: -,
+	school: ?,  # '?'는 'null' 표현
+	in-school: -,  # '-'는 'false' 표현
 ),
 (
-	..student,
+	..student,  # 앵커 student를 사용한 딕셔너리 전개 구문
 	name: 'Cathy',
 	id: "\(school)-4132"
 	gender: ?,
-	'debt($)': 299_792_458, # OMG!
+	# 허용되지 않는 키 이름은 따옴표로 감싸야 함
+	'debt($)': 299_792_458, # 숫자 사이 '_' 구분자 사용 가능
 )
